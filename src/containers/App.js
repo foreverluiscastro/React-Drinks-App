@@ -1,7 +1,7 @@
-import './App.css';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
+import BeerPage from './BeerPage';
 
 class App extends Component {
 
@@ -11,7 +11,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch('https://api.punkapi.com/v2/beers')
-    .then(res => res.json())
+    .then(resp => resp.json())
     .then(data =>
       this.setState({
         beers: data
@@ -25,7 +25,7 @@ class App extends Component {
         <div>
           <NavBar />
           <Route exact path="/" render={ () => <div>Home</div> }/>
-          <Route path='/beers' render={ routerProps => <BeersPage {...routerProps} beers={this.state.beers}/>} />
+          <Route path='/beers' render={ routerProps => <BeerPage {...routerProps} beers={this.state.beers}/>} />
         </div>
       </Router>
     );

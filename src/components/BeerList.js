@@ -10,7 +10,7 @@ const BeerList = ({ beers }) => {
         <div>
             {renderBeers}
         </div>
-    )
-}
+    );
+};
 
 export default BeerList;
