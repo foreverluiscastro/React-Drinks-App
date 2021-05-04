@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const BeerList = ({ beers }) => {
     const renderBeers = Object.keys(beers).map(beerID =>
-        <Link key={beerID} to={`/beers/${beerID}`}>{beers[beerID].title}</Link>
+        <Link key={beerID} to={`/beers/${beerID}`}>{beers[beerID].name}</Link>
     );
     
     return (

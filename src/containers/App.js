@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import BeerPage from './BeerPage';
+import Home from '../components/Home'
 
 class App extends Component {
 
@@ -24,8 +25,9 @@ class App extends Component {
       <Router>
         <div>
           <NavBar />
-          <Route exact path="/" render={ () => <div>Home</div> }/>
+          <Route exact path="/" component={ Home }/>
           <Route path='/beers' render={ routerProps => <BeerPage {...routerProps} beers={this.state.beers}/>} />
+          <Route path='/cart'/>
         </div>
       </Router>
     );
