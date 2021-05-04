@@ -8,7 +8,7 @@ const BeerList = ({ beers }) => {
     
     return (
         <div>
-            {renderBeers}
+            { renderBeers }
         </div>
     );
 };
