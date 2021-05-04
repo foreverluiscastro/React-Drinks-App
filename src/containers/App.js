@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import BeerPage from './BeerPage';
 import Home from '../components/Home';
-import TheFridge from '../components/TheFridge';
+import Fridge from '../components/Fridge';
 import '../App.css';
 
 class App extends Component {
 
   state = {
-    beers: ""
+    beers: []
   }
 
   componentDidMount() {
@@ -29,7 +29,7 @@ class App extends Component {
           <NavBar />
           <Route exact path="/" component={ Home }/>
           <Route path='/beers' render={ routerProps => <BeerPage {...routerProps} beers={this.state.beers}/>} />
-          <Route exact path='/thefridge' component={TheFridge}/>
+          <Route exact path='/fridge' component={Fridge}/>
         </div>
       </Router>
     );
