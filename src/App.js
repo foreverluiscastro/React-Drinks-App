@@ -4,6 +4,22 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 
 class App extends Component {
+
+  state = {
+    beers: ""
+  }
+
+  componentDidMount() {
+    fetch('https://api.punkapi.com/v2/beers')
+    .then(res => res.json())
+    .then(data =>
+      this.setState({
+        beers: data
+      })
+      )
+  }
+
+
   render() {
     return (
       <Router>
