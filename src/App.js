@@ -16,9 +16,8 @@ class App extends Component {
       this.setState({
         beers: data
       })
-      )
+    )
   }
-
 
   render() {
     return (
@@ -33,6 +32,8 @@ class App extends Component {
   }
 }
 
+export default App;
+
 {/* <div className="App">
         <header className="App-header">
           <p>
@@ -40,5 +41,3 @@ class App extends Component {
           </p>
         </header>
       </div> */}
-
-export default App;
