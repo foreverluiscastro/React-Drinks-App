@@ -39,10 +39,3 @@ class App extends Component {
 
 export default App;
 
-{/* <div className="App">
-        <header className="App-header">
-          <p>
-            The name of my app! tbd...
-          </p>
-        </header>
-      </div> */}
