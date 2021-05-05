@@ -12,6 +12,7 @@ const BeerShow = ({match, beers}) => {
             <p><b>Abv:</b>{ beer.abv }</p>
             <p><b>Description:</b>{ beer.description }</p>
             <p><b>Pairs well with:</b>{ beer.food_pairing }</p>
+            <button onClick={beer}>Save Beer</button>
         </div>
     );
 }

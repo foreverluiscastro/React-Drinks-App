@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import BeerPage from './BeerPage';
 import Home from '../components/Home';
-import Fridge from '../components/Fridge';
+import FridgePage from './FridgePage';
 import '../App.css';
 
 class App extends Component {
 
   state = {
-    beers: []
+    beers: [],
+    savedBeers: []
   }
 
   componentDidMount() {
@@ -22,6 +23,10 @@ class App extends Component {
     )
   }
 
+  handleClick = () => {
+    
+  }
+
   render() {
     return (
       <Router>
@@ -30,7 +35,8 @@ class App extends Component {
           <Route exact path="/" component={ Home }/>
           <Route path='/beers' render={ routerProps =>
           <BeerPage {...routerProps} beers={this.state.beers}/>} />
-          <Route exact path='/fridge' component={Fridge}/>
+          <Route path='/fridge' render={ routerProps =>
+          <FridgePage {...routerProps} beers={this.state.savedBeers} onChange={this.handleClick}/>}/>
         </div>
       </Router>
     );
