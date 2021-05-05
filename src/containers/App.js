@@ -28,7 +28,8 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Route exact path="/" component={ Home }/>
-          <Route path='/beers' render={ routerProps => <BeerPage {...routerProps} beers={this.state.beers}/>} />
+          <Route path='/beers' render={ routerProps =>
+          <BeerPage {...routerProps} beers={this.state.beers}/>} />
           <Route exact path='/fridge' component={Fridge}/>
         </div>
       </Router>

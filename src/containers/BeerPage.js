@@ -7,7 +7,7 @@ const BeerPage = ({ match, beers }) => (
     <div>
         <BeerList beers={beers} />
         <Route exact path={match.url} render={() => <h3>Choose beers from the list above!</h3>} />
-        <Route path={`${match.url}/:beerId`} render={routerProps =>
+        <Route path={`${match.url}/:id`} render={routerProps =>
         <BeerShow {...routerProps} beers={beers} />}/>
     </div>
 )

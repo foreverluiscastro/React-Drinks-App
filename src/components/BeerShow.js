@@ -2,15 +2,16 @@ import '../App.css';
 import React from 'react';
 
 const BeerShow = ({match, beers}) => {
+    const beer = beers[match.params.id-1]
 
     return(
         <div className="card">
-            <h3>{ beers[match.params.beerId].name }</h3>
-            <img src={ beers[match.params.beerId].image_url } class="beer-avatar"/>
-            <p>Tagline:{ beers[match.params.beerId].tagline }</p>
-            <p>Abv:{ beers[match.params.beerId].abv }</p>
-            <p>Description:{ beers[match.params.beerId].description }</p>
-            <p>Pairs well with:{ beers[match.params.beerId].food_pairing.join(", ") }</p>
+            <h3>{ beer.name }</h3>
+            <img src={ beer.image_url } class="beer-avatar"/>
+            <p><b>Tagline:</b><i>{ beer.tagline }</i></p>
+            <p><b>Abv:</b>{ beer.abv }</p>
+            <p><b>Description:</b>{ beer.description }</p>
+            <p><b>Pairs well with:</b>{ beer.food_pairing }</p>
         </div>
     );
 }

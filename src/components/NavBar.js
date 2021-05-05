@@ -7,7 +7,7 @@ const NavBar = () => {
         <div className="navbar">
             <NavLink style={{ marginRight: '10px' }} to="/">Home</NavLink>
             <NavLink style={{ marginRight: '10px' }} to="/beers">Beers</NavLink>
-            <NavLink style={{ marginRight: '10px' }} to='/fridge'><b>Fridge</b></NavLink>
+            <NavLink style={{ marginRight: '10px' }} to="/fridge"><b>Fridge</b></NavLink>
         </div>
     );
 };

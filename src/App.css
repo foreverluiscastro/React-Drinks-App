@@ -7,11 +7,9 @@
 .card {
   text-align: center;  
   padding: 1rem;
-  width: 15rem;
-  
+  width: 25rem;
   display: inline-grid;
   margin: auto;
-  box-shadow: 3px 4px #e04b52;
 }
 
 .navbar {
@@ -23,8 +21,12 @@
 
 .App {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: orange;
+  font-family: sans-serif;
+  background: linear-gradient(orange, yellow);
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .App-logo {
