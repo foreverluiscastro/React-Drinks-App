@@ -1,8 +1,12 @@
 import '../App.css';
 import React from 'react';
 
-const BeerShow = ({match, beers}) => {
+const BeerShow = ({match, beers, addBeer }) => {
     const beer = beers[match.params.id-1]
+    
+    const handleClick = () => {
+        addBeer(beer)
+    }
 
     return(
         <div className="card">
@@ -12,7 +16,7 @@ const BeerShow = ({match, beers}) => {
             <p><b>Abv:</b>{ beer.abv }</p>
             <p><b>Description:</b>{ beer.description }</p>
             <p><b>Pairs well with:</b>{ beer.food_pairing }</p>
-            <button onClick={beer}>Save Beer</button>
+            <button onClick={handleClick}>Save Beer</button>
         </div>
     );
 }

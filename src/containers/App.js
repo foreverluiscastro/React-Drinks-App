@@ -9,8 +9,7 @@ import '../App.css';
 class App extends Component {
 
   state = {
-    beers: [],
-    savedBeers: []
+    beers: []
   }
 
   componentDidMount() {
@@ -23,8 +22,12 @@ class App extends Component {
     )
   }
 
-  handleClick = () => {
-    
+  saveBeer = (beer) => {
+    console.log(beer)
+  }
+
+  deleteBeer = (beer) => {
+    console.log(beer)
   }
 
   render() {
@@ -34,9 +37,9 @@ class App extends Component {
           <NavBar />
           <Route exact path="/" component={ Home }/>
           <Route path='/beers' render={ routerProps =>
-          <BeerPage {...routerProps} beers={this.state.beers}/>} />
+          <BeerPage {...routerProps} beers={this.state.beers} addBeer={this.saveBeer}/>} />
           <Route path='/fridge' render={ routerProps =>
-          <FridgePage {...routerProps} beers={this.state.savedBeers} onChange={this.handleClick}/>}/>
+          <FridgePage {...routerProps} beers={this.state.beers} deleteBeer={this.deleteBeer}/>}/>
         </div>
       </Router>
     );
