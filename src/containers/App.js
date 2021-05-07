@@ -22,11 +22,20 @@ class App extends Component {
         beers: data
       })
     )
+    fetch('http://localhost:3001/fridge')
+    .then(resp => resp.json())
+    .then(data =>
+      this.setState({
+        savedBeers: data
+      })
+    )
   }
 
   saveBeer = (beer) => {
     console.log(beer)
-    fetch('http://localhost:3000/fridge', {
+    beer.id = null
+
+    fetch('http://localhost:3001/fridge', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -45,6 +54,15 @@ class App extends Component {
 
   deleteBeer = (beer) => {
     console.log(beer)
+    
+
+    fetch(`http://localhost:3001/fridge/${beer.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.json())
   }
 
   render() {
