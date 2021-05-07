@@ -17,7 +17,6 @@ const FridgePage = ({ match, deleteBeer }) => {
     // debugger;
     return (
     <div>
-        <h1>I am the fridge!</h1>
         <SavedBeerList savedBeers={savedBeers} deleteBeer={deleteBeer}/>
         <Route exact path={match.url} render={() => <h3>Here are your saved beers!</h3>} />
         {/* <Route path={`http://localhost:3001/:id`} render={routerProps =>
