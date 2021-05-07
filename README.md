@@ -19,7 +19,7 @@ It renders two child components, BeerList and BeerShow,\
 as well as creates routes for both their paths.
 
 BeerList creates a list of Links attached\
-to the specified beer using the beer's id.\
+to the specified beer using the beer's id.
 
 BeerShow uses destructuring to identify each beer by id and\
 renders a div that displays the beers information in the browser.\
@@ -37,9 +37,9 @@ button from BeerShow, we know that the Fridge page will be displaying\ informati
 Clicking the Fridge Link in the Navbar will render the Fridge component which also renders two child components, SavedBeerList and SavedBeerShow (beginning to see a pattern here?).
 
 SavedBeerList creates a list of Links attached\
-to the specified beer using the beer's id.\
+to the specified beer using the beer's id.
 
 SavedBeerShow uses destructing to identify each beer by id\
 and renders a div that displays the beers information in the browser.\
 SavedBeerShow also adds a button labeled "Remove Beer From Fridge" which\
-triggers a `DELETE` request that removes the beer from the [internal-API].
+triggers a `DELETE` request that removes the beer from the internal-API.
