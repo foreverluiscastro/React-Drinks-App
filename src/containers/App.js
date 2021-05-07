@@ -33,7 +33,7 @@ class App extends Component {
 
   saveBeer = (beer) => {
     console.log(beer)
-    beer.id = null
+    // beer.id = null
 
     fetch('http://localhost:3001/fridge', {
       method: 'POST',
