@@ -4,7 +4,7 @@ import SavedBeerList from '../components/SavedBeerList';
 import SavedBeerShow from '../components/SavedBeerShow';
 
 // const FridgePage = ({ match, savedBeers, deleteBeer }) => {
-const FridgePage = ({ match }) => {
+const FridgePage = ({ match, deleteBeer }) => {
     const [savedBeers, setSavedBeers] = useState([])
 
     useEffect(() => {
@@ -13,9 +13,6 @@ const FridgePage = ({ match }) => {
         .then(data => setSavedBeers(data))
     }, [])
 
-    const deleteBeer = (beer) => {
-        console.log(beer)
-    }
     
     // debugger;
     return (
