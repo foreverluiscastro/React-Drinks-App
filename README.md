@@ -2,7 +2,7 @@
 My name is Luis and this is my Beer Fridge React App.
 
 ## Repository Infromation
-You can find the github repository for this application [here] (https://github.com/foreverluiscastro/React-Drinks-App).
+You can find the github repository for this application [here](https://github.com/foreverluiscastro/React-Drinks-App).
 
 ### How Does it work?
 
