@@ -15,7 +15,7 @@ const SavedBeerShow = ({match, savedBeers, deleteBeer}) => {
             <p><b>Tagline:</b><i>{ beer.tagline }</i></p>
             <p><b>Abv:</b>{ beer.description }</p>
             <p><b>Pairs well with:</b>{ beer.food_pairing.join(", ") }</p>
-            <button onClick={handleClick}>Delete Beer</button>
+            <button onClick={handleClick}>Remove Beer From Fridge</button>
         </div>
     )
 }
