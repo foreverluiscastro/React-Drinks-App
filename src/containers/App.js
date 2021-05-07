@@ -9,10 +9,12 @@ import '../App.css';
 class App extends Component {
 
   state = {
-    beers: []
+    beers: [],
+    savedBeers: []
   }
 
   componentDidMount() {
+    console.log("Mounting")
     fetch('https://api.punkapi.com/v2/beers')
     .then(resp => resp.json())
     .then(data =>
@@ -24,6 +26,21 @@ class App extends Component {
 
   saveBeer = (beer) => {
     console.log(beer)
+    fetch('http://localhost:3000/fridge', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(beer)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log("saving beer", data)
+      this.setState({
+        savedBeers: data
+      })
+    })
   }
 
   deleteBeer = (beer) => {
@@ -31,6 +48,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("Rendering")
     return (
       <Router>
         <div className="App">
@@ -39,7 +57,7 @@ class App extends Component {
           <Route path='/beers' render={ routerProps =>
           <BeerPage {...routerProps} beers={this.state.beers} addBeer={this.saveBeer}/>} />
           <Route path='/fridge' render={ routerProps =>
-          <FridgePage {...routerProps} beers={this.state.beers} deleteBeer={this.deleteBeer}/>}/>
+          <FridgePage {...routerProps} savedBeers={this.state.savedBeers} deleteBeer={this.deleteBeer}/>}/>
         </div>
       </Router>
     );

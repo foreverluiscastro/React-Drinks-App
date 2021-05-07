@@ -15,7 +15,7 @@ const BeerShow = ({match, beers, addBeer }) => {
             <p><b>Tagline:</b><i>{ beer.tagline }</i></p>
             <p><b>Abv:</b>{ beer.abv }</p>
             <p><b>Description:</b>{ beer.description }</p>
-            <p><b>Pairs well with:</b>{ beer.food_pairing }</p>
+            <p><b>Pairs well with:</b>{ beer.food_pairing.join(", ") }</p>
             <button onClick={handleClick}>Save Beer</button>
         </div>
     );
