@@ -32,7 +32,7 @@ This where the fridge page comes in.
 
 The Fridge page functions in a manner similar to the Beers page.\
 Since information was previously passed into the fridge via the "Save Beer"\
-button from BeerShow, we know that the Fridge page will be displaying\ information added to our db.json through the `POST` request.\
+button from BeerShow, we know that the Fridge page will be displaying\ information added to our db.json through the `POST` request.
 
 Clicking the Fridge Link in the Navbar will render the Fridge component which also renders two child components, SavedBeerList and SavedBeerShow (beginning to see a pattern here?).
 
