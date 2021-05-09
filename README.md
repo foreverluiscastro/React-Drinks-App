@@ -9,10 +9,12 @@ You can find the github repository for this application [here](https://github.co
 `npm start` Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+This application accessses a mock internal-API. To initialize the server use `json-server --watch db.son --port 3001`
+
 The page will load a navbar and Home page.\
 Use the links to navigate to the other components.
 
-### Beers page
+### Beers Page
 
 The Beers page uses information obtained from a fetch request to an [external-API](https://api.punkapi.com/v2/beers).\
 It renders two child components, BeerList and BeerShow,\
@@ -28,7 +30,7 @@ each beer to an [internal-API](http://localhost:3001/fridge) using a `POST` requ
 
 This where the fridge page comes in.
 
-### Fridge page
+### Fridge Page
 
 The Fridge page functions in a manner similar to the Beers page.\
 Since information was previously passed into the fridge via the "Save Beer"\
