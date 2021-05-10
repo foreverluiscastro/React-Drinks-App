@@ -1,7 +1,7 @@
 # The Beer Fridge React App
 My name is Luis and this is my Beer Fridge React App.
 
-## Repository Infromation
+## Repository Information
 You can find the github repository for this application [here](https://github.com/foreverluiscastro/React-Drinks-App).
 
 ### How Does it work?
@@ -9,7 +9,8 @@ You can find the github repository for this application [here](https://github.co
 `npm start` Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This application accessses a mock internal-API. To initialize the server use `json-server --watch db.son --port 3001`
+This application uses db.json file which, when initialized, acts as a mock internal-API.\
+To initialize the server use `json-server --watch db.son --port 3001`.
 
 The page will load a navbar and Home page.\
 Use the links to navigate to the other components.
